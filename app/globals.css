@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', serif;
+  --font-dm-sans: 'DM Sans', sans-serif;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-dm-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-display {
+    font-family: var(--font-playfair);
+  }
+}
+
+@layer components {
+  .chip {
+    @apply px-4 py-2 rounded-full border border-stone-200 text-sm text-stone-600 cursor-pointer
+    transition-all duration-200 hover:border-stone-400 select-none;
+  }
+  .chip.active {
+    @apply bg-stone-900 text-stone-50 border-stone-900;
+  }
+
+  .btn-primary {
+    @apply w-full py-3.5 bg-stone-900 text-stone-50 rounded-xl text-sm font-medium
+    tracking-wide transition-opacity hover:opacity-85 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply px-5 py-2.5 border border-stone-200 rounded-xl text-sm text-stone-700
+    transition-colors hover:bg-stone-100;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-stone-100 overflow-hidden;
+  }
+
+  .product-card {
+    @apply bg-white rounded-2xl border border-stone-100 overflow-hidden
+    transition-shadow hover:shadow-md hover:border-stone-200;
+  }
+
+  .section-title {
+    font-family: var(--font-playfair);
+    @apply text-2xl font-normal leading-tight;
+  }
+
+  .label {
+    @apply text-xs font-medium uppercase tracking-widest text-stone-400;
+  }
+
+  .step-dot {
+    @apply w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium
+    border border-stone-200 text-stone-400 transition-all duration-300;
+  }
+  .step-dot.active {
+    @apply bg-stone-900 text-stone-50 border-stone-900;
+  }
+  .step-dot.done {
+    @apply bg-emerald-600 text-white border-emerald-600;
+  }
+
+  .skeleton {
+    @apply bg-stone-100 animate-pulse rounded;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
