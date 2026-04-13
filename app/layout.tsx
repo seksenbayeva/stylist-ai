@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
       <body className={`${playfair.variable} ${dmSans.variable} font-sans bg-stone-50 text-stone-900`}>
         {children}
       </body>

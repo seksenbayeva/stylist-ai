@@ -54,7 +54,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-stone-100 px-5 py-4 flex items-center justify-between">
-        <h1 className="font-display text-xl tracking-tight">
+        <h1 className="font-display text-2xl tracking-tight">
           Styl<span className="italic text-stone-400">ist</span> AI
         </h1>
         <div className="flex items-center gap-3">
